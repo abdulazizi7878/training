@@ -1,16 +1,22 @@
 import { Stack } from "expo-router";
+import { StatusBar } from "react-native";
 
 export default function RootLayout() {
   return (
-  <Stack> 
+    <>
+    <StatusBar barStyle={"light-content"}/>
+    <Stack> 
     <Stack.Screen 
-    name="index" 
+    name="(tabs)" 
     options={{
-      headerTitle: "Sticker Smash" 
+      headerShown: false,
     }}
     /> 
+    <Stack.Screen name="+not-found" options={{headerTitle:"Oops! Not Found"}} />
 
-    <Stack.Screen name="about" options={{headerTitle:"About Abdulaziz"}} />
-  </Stack>
+  </Stack>  
+    
+    </>
+
 );
 }
