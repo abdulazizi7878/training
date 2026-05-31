@@ -1,18 +1,18 @@
-import { Image,StyleSheet } from "react-native";
-
-
-
-
+import { Image } from "react-native";
 
 type ImageData = {
      ImageSource : string;
-     WidthStyle: number;
-     HeightStyle: number  ;
+     SelectedImage?: string;
+     WidthStyle: number | string;
+     HeightStyle: string | number ;
+     BorderStyle: number;
 };
 
 
-function ImageViewer({ImageSource,WidthStyle,HeightStyle}:ImageData) {
-     return (<Image source={ImageSource} style={{width:WidthStyle,}} />)
+function ImageViewer({ImageSource,WidthStyle,HeightStyle,BorderStyle,SelectedImage}:ImageData) {
+     const sourceOfImage = SelectedImage ? {uri : SelectedImage} : ImageSource;
+
+     return (<Image source={sourceOfImage} style={{width:WidthStyle,height:HeightStyle,borderRadius:BorderStyle,padding:2}} />)
 }
 
 

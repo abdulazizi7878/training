@@ -1,18 +1,23 @@
 import { Link } from "expo-router";
+import {FontAwesome} from "@expo/vector-icons";
 import {View, Text, StyleSheet} from "react-native";
+import { Button } from "expo-router/build/react-navigation";
 
 
 export default function AboutScreen () {
 
      return(
           <View style={styles.cont} >
+               
+               <FontAwesome name="info" size={50} />
                <Text style={styles.myText}>
-                    This Is about Page
+                    About us
                </Text>
-
                
                <Link href={"/"} style={styles.button}>
-               Go home
+                    <Button style={{backgroundColor:"#000"}}>
+                         <Text style={{color:"#fff"}}>Coming Soon</Text>
+                    </Button>
                </Link>  
                
           </View>
@@ -21,18 +26,20 @@ export default function AboutScreen () {
 
 const styles = StyleSheet.create({
      cont : {
-          backgroundColor: "#010101",
+          backgroundColor: "#fff",
           flex: 1,
           alignItems: "center",
           justifyContent:"center",
      },
      myText: {
-          color : "white",
+          color : "black",
           fontSize: 40,
+          fontFamily:"sans"
      },
      button: {
-          color:"white",
+          color:"black",
           textDecorationLine :"underline",
-          textDecorationColor : "white",
+          textDecorationColor : "black",
+          marginTop:20
         },
 })
