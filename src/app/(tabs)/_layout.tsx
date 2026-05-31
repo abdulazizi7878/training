@@ -23,7 +23,7 @@ export default function TabsLayout() {
       headerTitle: "Sticker Smash",
       tabBarIcon: ({focused})=> <Ionicons 
       name={ focused ? "home-sharp" : "home-outline"} 
-      size={30}
+      size={24}
       color={"#fff"}
       />
     }}
@@ -33,7 +33,7 @@ export default function TabsLayout() {
     options={{
      headerTitle: "About",
      tabBarIcon: ({focused})=> <Ionicons name={focused ? "information-circle-sharp" : "information-circle-outline"} 
-     size={30}
+     size={24}
      color={"#fff"}
 
      />

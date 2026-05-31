@@ -1,19 +1,18 @@
 import { Link } from "expo-router";
-import {View,Button, Text, StyleSheet} from "react-native";
+import {View, Text, StyleSheet} from "react-native";
 
 
 export default function AboutScreen () {
 
      return(
-          <View style={styles.cont}>
+          <View style={styles.cont} >
                <Text style={styles.myText}>
                     This Is about Page
                </Text>
 
                
                <Link href={"/"} style={styles.button}>
-               <Button title="Go to Home" color={"var(--abd)"} />
-               
+               Go home
                </Link>  
                
           </View>
